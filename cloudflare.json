@@ -1,22 +1,24 @@
 {
-    "name": "Trumpet II",
+    "name": "Alexa",
     "category": "webmaster",
-    "description": "This app lets you put a small message at the top of your site. If the user dismisses the message by clicking on it, Trumpet will not show it again for 24 hours.",
+    "description": "This app integrates Alexa web statistics within cloudflare.",
     "keywords" : [
         "webmaster"
         ],
     "version": "0.1.0",
     "contributors": [
     {
-        "name" : "Martin Reistadbakk",
-        "email" : "martin@reistadbakk.com"
+    	"name" : "Doug Davis",
+    	"email" : "dougd@latexcatfish.com"
+        "trumpet name" : "Martin Reistadbakk",
+        "trumpet email" : "martin@reistadbakk.com"
     }
     ],
         "repository" : {
             "type" : "git",
-            "url" : "https://github.com/martior/trumpet.git"
+            "url" : "https://github.com/wylekyote/alexacf.git"
         },
-        "main" : "./public/javascripts/trumpet.js",
+        "main" : "./public/javascripts/alexa.js",
         "dependencies" : {
         },
         "licenses" : [
@@ -30,11 +32,11 @@
         "config" : {
             "assets" : {
                 "logos" : {
-                    "200px": "./public/images/trumpet_logo-200.png",
-                    "132px": "./public/images/trumpet_logo-132.png"
+                    "200px": "./public/images/alexaCF-200.png",
+                    "132px": "./public/images/alexaCF-132.png"
                 },
                 "detail_page" : [
-                	"./public/images/trumpet_screenshot.png"
+                	"./public/images/alexaCF_screenshot.png"
                 ]
             },
             "payment": {},
@@ -46,56 +48,17 @@
             "interface": [
             {
                 "id": "message",
-                "name": "Display text",
-                "description": "The text you would like displayed on your site. Leave blank to disable Trumpet.",
+                "name": "Alexa Key",
+                "description": "This is the tracking key for alexa commonly called the ATRK number.",
                 "type": "string"
                 },
             {
                 "id": "link",
-                "name": "Link (premium only)",
-                "description": "A URL with more information. Should start with 'http://'.",
+                "name": "Link",
+                "description": "the tracked main URL should start with 'http://'.",
                 "type": "string"
                 },
-            {
-                "id": "linktext",
-                "name": "Link Text (premium only)",
-                "description": "The text you want to be tunred into a link. e.g. 'Read more...'.",
-                "type": "string"
-                },
-            {
-                "id": "colorbackground",
-                "name": "Background Color (premium only)",
-                "description": "The background color of the status bar.",
-                "type": "string"
-                },
-            {
-                "id": "colortext",
-                "name": "Text Color (premium only)",
-                "description": "The color of the text.",
-                "type": "string"
-                },
-            {
-                "id": "colorlink",
-                "name": "Link Color ",
-                "description": "The color of the link text",
-                "type": "string"
-            },
-            {
-                "id": "branded",
-                "type": "select",
-                "name": "Display Trumpet Logo? (premium only)",
-                "description": "Choose whether to buy a ticket",
-                "options": [
-                    {
-                        "label": "Yes, display the logo!",
-                        "value": "true"
-                    },
-                    {
-                        "label": "No, do not display the logo",
-                        "value": ""
-                    }
-                ]
-            }
+        	
             ]
         }
 }
